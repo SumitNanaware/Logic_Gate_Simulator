@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.1 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkFileFilter" id="filefilter1">
+    <mime-types>
+      <mime-type>image/jpeg</mime-type>
+      <mime-type>image/png</mime-type>
+    </mime-types>
+  </object>
+  <object class="GtkImage" id="image1">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-about</property>
+  </object>
+  <object class="GtkImage" id="image10">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">nor1.png</property>
+  </object>
+  <object class="GtkImage" id="image11">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">xor1.png</property>
+  </object>
+  <object class="GtkImage" id="image12">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">xnor1.png</property>
+  </object>
+  <object class="GtkImage" id="image13">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-preferences</property>
+  </object>
+  <object class="GtkImage" id="image14">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-delete</property>
+  </object>
+  <object class="GtkImage" id="image2">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">and1.png</property>
+  </object>
+  <object class="GtkImage" id="image3">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">or1.png</property>
+  </object>
+  <object class="GtkImage" id="image4">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">not1.png</property>
+  </object>
+  <object class="GtkImage" id="image5">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-disconnect</property>
+  </object>
+  <object class="GtkImage" id="image6">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-network</property>
+  </object>
+  <object class="GtkImage" id="image7">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-media-play</property>
+  </object>
+  <object class="GtkImage" id="image8">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-media-pause</property>
+  </object>
+  <object class="GtkImage" id="image9">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">nand1.png</property>
+  </object>
+  <object class="GtkWindow" id="window">
+    <property name="width_request">1000</property>
+    <property name="height_request">800</property>
+    <property name="can_focus">False</property>
+    <property name="tooltip_text" translatable="yes">You are in the logic simulator window</property>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="fixed1">
+        <property name="width_request">-1</property>
+        <property name="height_request">-1</property>
+        <property name="visible">True</property>
+        <property name="app_paintable">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkStackSwitcher" id="stksw1">
+            <property name="width_request">100</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="stack">stk1</property>
+          </object>
+          <packing>
+            <property name="x">15</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label">
+            <property name="width_request">500</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">label</property>
+          </object>
+          <packing>
+            <property name="x">218</property>
+            <property name="y">120</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkStack" id="stk1">
+            <property name="width_request">960</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="transition_type">over-right-left</property>
+            <child>
+              <object class="GtkFixed" id="stkfxd1">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="tooltip_text" translatable="yes">file</property>
+                <child>
+                  <object class="GtkFileChooserButton" id="buttonnewfile">
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="has_focus">True</property>
+                    <property name="is_focus">True</property>
+                    <property name="tooltip_text" translatable="yes">Creates new file</property>
+                    <property name="filter">filefilter1</property>
+                    <property name="title" translatable="yes">New FIle</property>
+                    <signal name="file-set" handler="on_buttonnewfile_file_set" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">204</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkFileChooserButton" id="buttonopenfile">
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="is_focus">True</property>
+                    <property name="filter">filefilter1</property>
+                    <property name="title" translatable="yes" context="Open New File" comments="Open New file">Open New file</property>
+                    <signal name="file-set" handler="on_buttonopenfile_file_set" swapped="no"/>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkFileChooserButton" id="buttonsavefile">
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="tooltip_text" translatable="yes">Save the File</property>
+                    <property name="filter">filefilter1</property>
+                    <property name="title" translatable="yes">Save FIle</property>
+                    <signal name="file-set" handler="on_buttonsavefile_file_set" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">101</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="name">page1</property>
+                <property name="title" translatable="yes">Files</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="stkfxd2">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="tooltip_text" translatable="yes">Draw a circuit</property>
+                <child>
+                  <object class="GtkButton" id="buttonwire1">
+                    <property name="label" translatable="yes">Wire</property>
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="image">image6</property>
+                    <property name="always_show_image">True</property>
+                    <signal name="clicked" handler="on_buttonwire1_clicked" swapped="no"/>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="buttonand">
+                    <property name="label" translatable="yes">Logic-AND</property>
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="image">image2</property>
+                    <property name="always_show_image">True</property>
+                    <signal name="clicked" handler="on_buttonand_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">102</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="buttonor">
+                    <property name="label" translatable="yes">Logic- OR</property>
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="image">image3</property>
+                    <property name="always_show_image">True</property>
+                    <signal name="clicked" handler="on_buttonor_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">249</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="buttonnot">
+                    <property name="label" translatable="yes">Logic-NOT</property>
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="image">image4</property>
+                    <property name="always_show_image">True</property>
+                    <signal name="clicked" handler="on_buttonnot_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">389</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="buttonswitch">
+                    <property name="label" translatable="yes">Switch</property>
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="image">image5</property>
+                    <property name="always_show_image">True</property>
+                    <signal name="clicked" handler="on_buttonswitch_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">536</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="buttonled">
+                    <property name="label" translatable="yes">LED</property>
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="image">image1</property>
+                    <property name="always_show_image">True</property>
+                    <signal name="clicked" handler="on_buttonled_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">638</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="name">page2</property>
+                <property name="title" translatable="yes">Draw</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="stkfxd3">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="tooltip_text" translatable="yes">run the circuit</property>
+                <child>
+                  <object class="GtkButton" id="buttonrun">
+                    <property name="label" translatable="yes">Run</property>
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="image">image7</property>
+                    <property name="always_show_image">True</property>
+                    <signal name="clicked" handler="on_buttonrun_clicked" swapped="no"/>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="buttonstop">
+                    <property name="label" translatable="yes">STOP</property>
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="image">image8</property>
+                    <property name="always_show_image">True</property>
+                    <signal name="clicked" handler="on_buttonstop_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">101</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="buttonconnect">
+                    <property name="label" translatable="yes">Connect</property>
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="image">image13</property>
+                    <property name="always_show_image">True</property>
+                    <signal name="clicked" handler="on_buttonconnect_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">203</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="deleteledbutton">
+                    <property name="label" translatable="yes">delete a led</property>
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="image">image14</property>
+                    <property name="always_show_image">True</property>
+                    <signal name="clicked" handler="on_deleteledbutton_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">306</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="name">page3</property>
+                <property name="title" translatable="yes">Run</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkFixed" id="stkfxd4">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkButton" id="buttonnand">
+                    <property name="label" translatable="yes">Logic- NAND</property>
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="image">image9</property>
+                    <property name="always_show_image">True</property>
+                    <signal name="clicked" handler="on_buttonnand_clicked" swapped="no"/>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="buttonnor">
+                    <property name="label" translatable="yes">Logic- NOR</property>
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="image">image10</property>
+                    <property name="always_show_image">True</property>
+                    <signal name="clicked" handler="on_buttonnor_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">162</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="buttonxor">
+                    <property name="label" translatable="yes">Logic-XOR</property>
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="image">image11</property>
+                    <property name="always_show_image">True</property>
+                    <signal name="clicked" handler="on_buttonxor_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">314</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="buttonxnor">
+                    <property name="label" translatable="yes">Logic-XNOR</property>
+                    <property name="width_request">100</property>
+                    <property name="height_request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="image">image12</property>
+                    <property name="always_show_image">True</property>
+                    <signal name="clicked" handler="on_buttonxnor_clicked" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="x">460</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="name">page0</property>
+                <property name="title" translatable="yes">Ciruit Elements</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="x">15</property>
+            <property name="y">30</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
